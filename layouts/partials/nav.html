@@ -1,0 +1,11 @@
+<!-- This is the hidden menu component, sitting hidden above the "header component" -->
+<div class = 'nav-drop'>
+  <div class = 'nav-body'>
+    {{- range .Site.Data.menu }}
+      <a href = '{{ absURL .url }}' class = 'nav_item'>{{ .item }}</a>
+    {{- end }}
+    <div class = 'nav-close'></div>
+  </div>
+</div>
+<!-- This is the hidden menu component -->
+{{- partial "header.html" . }}

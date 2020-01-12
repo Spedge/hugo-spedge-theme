@@ -1,0 +1,7 @@
+<footer class = 'footer'>
+  <div class = 'footer_inner wrap pale'>
+    <p>&copy;&nbsp;<span class = 'year'></span>&nbsp;{{ .Site.Title }}.</p>
+  </div>
+</footer>
+{{ $scripts := resources.Get "js/index.js" | resources.ExecuteAsTemplate "js/index.js" . }}
+<script src = '{{ $scripts.Permalink }}'></script>
